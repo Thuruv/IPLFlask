@@ -27,7 +27,7 @@ def index():
 	        return '''
 <html>
   <head>
-    <title>Home Page</title>
+    <title>Live IPL Score</title>
   </head>
   <body>
     <h1>''' + titles[match].text + '''</h1>

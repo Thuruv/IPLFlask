@@ -32,7 +32,7 @@ def index():
     <title>Live IPL Score</title>
   </head>
   <body>
-    <h1>''' + '\n'.join(matches) + '''</h1>
+    <h1>''' + '<br>'.join(matches) + '''</h1>
   </body>
 </html>
 '''

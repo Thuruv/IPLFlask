@@ -22,15 +22,17 @@ def index():
 	soup = BeautifulSoup(r.text)
 	titles = soup.find_all("title")
 	size = len(titles)
+	matches = []
 	for match in range(size):
 	    if len(set(titles[match].text.split(" ")).intersection(set(teams))) > 0:
-	        return '''
+	    	matches.append(titles[match].text)
+	return '''
 <html>
   <head>
     <title>Live IPL Score</title>
   </head>
   <body>
-    <h1>''' + titles[match].text + '''</h1>
+    <h1>''' + '\n'.join(matches) + '''</h1>
   </body>
 </html>
 '''

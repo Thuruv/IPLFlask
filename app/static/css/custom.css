@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Ambroise Francois Demi Regular;
+    src: url(Ambroise Std Francois.woff);
+}
+
+div {
+    font-family: Ambroise Std Francois;
+}

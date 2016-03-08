@@ -22,7 +22,7 @@ def hindu():
             news =  [i.text for i in soup.find_all("p")]
             r = 'https://www.readability.com/api/content/v1/parser?url=' + ''.join(news) + '&token=b92b64e6e68f9614d87102bcccc726debe1feba0'
             c = requests.get(r)
-    return render_template('test.html',title = soup.title, content=c.json())
+    return render_template('test.html',title = soup.title, content=news)
 
 @app.route('/thindu')
 def tamil_hindu():
